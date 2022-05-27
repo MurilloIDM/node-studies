@@ -1,0 +1,6 @@
+{
+  "name": "node_branas",
+  "version": "1.0.0",
+  "main": "module_system/index.js",
+  "license": "MIT"
+}
