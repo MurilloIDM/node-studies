@@ -1,0 +1,1 @@
+// Criar funções para utilizar os métodos das Promises.
