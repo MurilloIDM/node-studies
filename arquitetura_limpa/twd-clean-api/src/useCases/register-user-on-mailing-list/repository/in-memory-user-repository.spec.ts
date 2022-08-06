@@ -13,4 +13,18 @@ describe("In memory User repository", () => {
     expect(user).toBeNull();
   });
 
+  test("should return user if it is found in the repository", async () => {
+    const users: UserData[] = [];
+    const userRepo = new InMemoryUserRepository(users);
+
+    const name = "any_name";
+    const email = "any@email.com";
+
+    await userRepo.add({ name, email });
+
+    const user = await userRepo.findUserByEmail("any@email.com");
+    
+    expect(user.name).toBe("any_name");
+  })
+
 });
