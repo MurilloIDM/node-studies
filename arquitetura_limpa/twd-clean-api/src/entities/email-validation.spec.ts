@@ -30,6 +30,11 @@ describe("E-mail validation", () => {
   test("should not accept domain part large than 255 chars", () => {
     const email = "local@" + 'd'.repeat(128) + '.' + 'd'.repeat(127);
     expect(Email.validate(email)).toBeFalsy();
+  });
+
+  test("should not accept empty local part", () => {
+    const email = "@email.com";
+    expect(Email.validate(email)).toBeFalsy();
   })
 
 })
