@@ -22,4 +22,9 @@ describe("E-mail validation", () => {
     expect(Email.validate(email)).toBeFalsy();
   });
 
+  test("should not accept strings large than 320 chars", () => {
+    const email = 'c'.repeat(64) + "@" + 'd'.repeat(127) + "." + 'c'.repeat(128);
+    expect(Email.validate(email)).toBeFalsy();
+  })
+
 })
