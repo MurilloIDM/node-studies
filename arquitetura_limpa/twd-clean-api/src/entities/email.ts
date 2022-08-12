@@ -9,7 +9,7 @@ export class Email {
     const lengthLocal = local.length;
     const lengthDomain = domain.length;
 
-    if (lengthLocal === 0 || lengthLocal > 64 || lengthDomain > 255) return false;
+    if (lengthLocal === 0 || lengthLocal > 64 || lengthDomain === 0 || lengthDomain > 255) return false;
 
     return true;
   }
