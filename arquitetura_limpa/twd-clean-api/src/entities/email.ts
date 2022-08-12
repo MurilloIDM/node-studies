@@ -11,6 +11,10 @@ export class Email {
 
     if (lengthLocal === 0 || lengthLocal > 64 || lengthDomain === 0 || lengthDomain > 255) return false;
 
+    const domainParts = domain.split(".");
+
+    if (domainParts.some((part) => part.length > 63)) return false;
+
     return true;
   }
 }
