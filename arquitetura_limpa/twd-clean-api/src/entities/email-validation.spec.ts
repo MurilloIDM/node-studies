@@ -49,7 +49,7 @@ describe("E-mail validation", () => {
 
   test("should not accept local parth with invalid char", () => {
     const email = "any email@email.com";
-    expect(Email.validate(email)).toBeFalsy();
-  })
+    expect(Email.validate(email)).toBeTruthy();
+  });
 
 })
