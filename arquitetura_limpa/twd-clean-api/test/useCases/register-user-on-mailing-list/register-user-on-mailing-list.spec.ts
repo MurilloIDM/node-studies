@@ -1,7 +1,7 @@
 
-import { UserData } from "../../../src/entities";
-import { UserRepository } from "../../../src/useCases/register-user-on-mailing-list/ports";
-import { RegisterUserOnMailingList } from "../../../src/useCases/register-user-on-mailing-list";
+import { UserData } from "@/entities";
+import { UserRepository } from "@/useCases/register-user-on-mailing-list/ports";
+import { RegisterUserOnMailingList } from "@/useCases/register-user-on-mailing-list";
 import { InMemoryUserRepository } from "./repository";
 
 

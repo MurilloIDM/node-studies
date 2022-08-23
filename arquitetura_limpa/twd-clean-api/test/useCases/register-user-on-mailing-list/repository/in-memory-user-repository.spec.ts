@@ -1,4 +1,4 @@
-import { UserData } from "../../../../src/entities";
+import { UserData } from "@/entities";
 
 import { InMemoryUserRepository } from "./"; 
 
