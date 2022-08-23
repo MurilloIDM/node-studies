@@ -1,6 +1,6 @@
-import { UserData } from "../../../../src/entities/user-data";
+import { UserData } from "../../../../src/entities";
 
-import { InMemoryUserRepository } from "./in-memory-user-repository"; 
+import { InMemoryUserRepository } from "./"; 
 
 describe("In memory User repository", () => {
 
