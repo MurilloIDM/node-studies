@@ -12,13 +12,21 @@ describe("Register user web controller", () => {
   let users: UserData[];
   let repo: UserRepository;
   let usecase: UseCase;
+  let errorThrowUseCaseStub: UseCase;
   let controller: RegisterUserController;
+
+  class ErrorThrowUseCaseStub implements UseCase {
+    perform(request: any): Promise<any> {
+      throw Error();
+    }
+  }
 
   beforeEach(() => {
     users = [];
     repo = new InMemoryUserRepository(users);
     usecase = new RegisterUserOnMailingList(repo);
     controller = new RegisterUserController(usecase);
+    errorThrowUseCaseStub = new ErrorThrowUseCaseStub();
   });
 
   test("should return status code 201 when request contains valid user data", async () => {
@@ -108,6 +116,7 @@ describe("Register user web controller", () => {
       },
     };
 
+    const controller: RegisterUserController = new RegisterUserController(errorThrowUseCaseStub);
     const response: HttpResponse = await controller.handle(request);
     
     expect(response.statusCode).toEqual(500);
