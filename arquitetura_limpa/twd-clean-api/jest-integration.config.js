@@ -1,7 +1,7 @@
 const config = require('./jest.config.js');
 
 config.testMatch = [
-  "**/&.test.ts"
+  "**/*.test.ts"
 ];
 
 module.exports = config;
