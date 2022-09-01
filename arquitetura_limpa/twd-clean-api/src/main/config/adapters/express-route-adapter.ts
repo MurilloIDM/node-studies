@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import { HttpRequest } from "@/web-controllers/ports";
 import { RegisterUserController } from "@/web-controllers";
 
-export const adaptRout = (controller: RegisterUserController) => {
+export const adaptRoute = (controller: RegisterUserController) => {
   return async (req: Request, res: Response) => {
     const httpRequest: HttpRequest = {
       body: req.body
