@@ -1,6 +1,6 @@
 import { UserData } from "@/entities";
 
-import { InMemoryUserRepository } from "./"; 
+import { InMemoryUserRepository } from "@/useCases/register-user-on-mailing-list/repository"; 
 
 describe("In memory User repository", () => {
 
